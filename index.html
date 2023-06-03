@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한신포차</title>
+  <style>
+    /* CSS 스타일 */
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* CSS 스타일 */
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #000000;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 130px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+    .section {
+      padding: 50px;
+      text-align: center;
+    }
+    
+    .section img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .button {
+      background-color: #ff0000;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    .footer {
+      background-color: #f0f0f0;
+      /* padding: 10px; */
+      height: 50px;
+      text-align: center;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    
+    /* 숨겨진 페이지 클래스 */
+    .hidden {
+      display: none;
+      background-image: none;
+    }
+
+
+    /* 추가 */
+    .section {
+      background-image: url('main01.jpg');
+      /* height: 100%; */
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: fixed;
+      top: 50px;
+      bottom: 50px;
+      left: 0;
+      right: 0;
+      overflow: auto;
+      color: #f0f0f0;
+      font-size: 2em;
+      /* display: flex; */
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 20px;
+    }
+    .section p {
+      font-size: 0.4em;
+    }
+    #menu{
+      background-image: none;
+      color : #000;
+
+    }
+    #developer{
+      background-image: url('bg_dev.jpg');
+      color : #000;
+    }
+    .food-item {
+      width: calc(33.33% - 40px);
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+      background-image: url("bg_dev.jpg");
+      border-radius: 10px;
+    }
+    .menubgi{
+      background-image: url("bg_sub2.jpg");
+      display: flex;
+      height: 60%;
+      color: #f0f0f0;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .fooewap{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 20px;
+    }
+    .food-item p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // 페이지 전환 처리
+      $(".navbar a").click(function() {
+        // 클릭한 링크의 href 값을 가져옴
+        var targetPage = $(this).attr("href");
+        
+        // 이전에 보여지고 있던 페이지를 숨김
+        $(".section").addClass("hidden");
+        
+        // 타겟 페이지를 보여줌
+        $(targetPage).removeClass("hidden");
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <a href="#home"><img src="logo.png" alt="한신포차 로고" href="#home"></a>
+    </div>
+
+    <div>
+      <a href="#menu">한신메뉴</a>
+      <a href="#developer">개발자 소개</a>
+    </div>
+  </div>
+  
+
+  <section id="home" class="section">
+    <h1>한신포차</h1>
+    <p>북적대는 포차 속 정겨운 사람 냄새, 주방에서 들려오는 맛있는 소리, 특별한 안주가 어우러져 누구나 부담없이 술잔을 기울일 수 있는 편안함이 있습니다.</p>
+  </section>
+
+  <section id="menu" class="section hidden">
+    <h2 class="menubgi">한신메뉴</h2>
+    <hr>
+    <div class="fooewap">
+    <div class="food-item">
+      <img src="chickenfoot.jpg" alt="음식 1">
+      <h2>한신무뼈닭발</h2>
+      <h3>대표 음식😀</h3>
+      <p>
+        국물닭발의 지존<br>
+        한신닭발의 맛 그대로<br>
+        무뼈로 편하게 즐기다!
+      </p>
+    </div>
+
+    <div class="food-item">
+      <img src="직화튤립닭발.jpg" alt="음식 2">
+      <h3>직화튤립닭발</h3>
+      <p> 
+        반무뼈닭발의 대명사<br>
+        튤립닭발을<br>
+        직화불향 가득 담아 즐기다!
+      </p>
+    </div>
+
+    <div class="food-item">
+      <img src="야채곱창볶음.jpg" alt="음식 3">
+      <h3>야채곱창볶음</h3>
+      <p>
+        정통의 맛 그대로.<br>
+        매콤하고 고소하게!
+      </p>
+    </div>
+    <div class="food-item">
+      <img src="허니갈릭누룽지통닭.jpg" alt="음식 4">
+      <h3>허니갈릭누룽지통닭</h3>
+      <p>달콤알싸한 허니갈릭소스가 입혀진 한신통닭에 누룽지를 덮다.</p>
+    </div>
+
+    <div class="food-item">
+      <img src="통통오징어.jpg" alt="음식 5">
+      <h3>통통오징어 국물떡볶이</h3>
+      <p>매콤한 떡볶이와<br>
+        바삭한 통오징어 튀김을 한번에!</p>
+    </div>
+
+    <div class="food-item">
+      <img src="숯불간장제육.jpg" alt="음식 6">
+      <h3>숯불간장제육</h3>
+      <p>은은하게 퍼지는 고기 특유의 육향과<br>
+        숯불향이 매력적인 정통포장마차 안주!</p>
+    </div>
+          
+  </div>
+  </section>
+
+  <section id="developer" class="section hidden">
+    <h2>개발자 소개</h2>
+    <div class="developer-info">
+      <div class="developer-image">
+        <img src="graymango7.jpg" alt="개발자 사진">
+      </div>
+      <div class="developer-details">
+        <h3>개발자: 이은겸</h3>
+        <p>학번: 202214257</p>
+        <p>github ID: graymango7</p>
+        <p>강원대학교 컴퓨터공학과 22학번</p>
+      </div>
+    </div>
+    <div class="developer-introduction">
+      <h4>홈페이지를 만들게 된 계기</h4>
+      <p> 나를 소개함과 동시에 좋아하는 것도 같이 소개할 수 있다면 좋을 것 같아 한신포차 홈페이지를 만들게 되었습니다. <br>저는 평소에 자주 가는 한신포차에 대한 애정과 함께, 제가 느끼는 포차의 매력을 다른 사람들과 공유하고 싶었습니다. <br>제가 할 수 있는 선에서 한신포차 홈페이지를 클론 코딩하기로 결정했습니다. <br><br>첫 번째 페이지에는 간단한 포차 소개로 구성하였습니다. <br>한신포차 특유의 분위기가 담긴 사진과 간단한 소개글로 포차의 이미지를 설명하는 페이지입니다.
+        
+        <br><br>두 번째 페이지에는 한신포차의 다양한 메뉴들을 소개하였습니다.<br>한신포차에서 판매하는 음식들과 입맛을 돋구는 사진들로 방문해보지 않은 사람들도 어떤 메뉴가 있는지 구경하고 어떤 음식을 시도해볼지에 대해 생각해볼 수 있도록 하였습니다.
+        
+        <br><br>마지막 세 번째 페이지에는 개발자인 저를 소개하는 공간으로 만들었습니다.<br> 자기소개와 개발자에 대한 정보, 홈페이지를 만들게 된 계기, 앞으로의 계획을 적어 내용을 채웠습니다.
+         </p>
+      <h4>앞으로의 계획</h4>
+      <p>컴퓨터공학도가 되기 위해 학생의 본분인 공부에 성실히 임할 것입니다.<br> 매번 계획은 세우나 세운 계획을 모두 이행하지 못하는 제 모습을 본 러닝코어 가르치미가 하루에 할 수 있는 양보다 적은 양부터 계획을 세워 자신의 역량을 체크하고 천천히 늘려가는 형식으로 공부한다면<br>역량도 늘리고 성취감도 얻을 수 있을 것이라는 조언을 해주어 그 조언을 바탕으로 천천히 늘려가며 꾸준히 공부하여 학점도 높이고 프로그래밍 실력도 높일 것입니다.<br>또한 프론트엔드뿐만 아니라 백엔드 분야의 공부도 하며 백엔드 개발자로서의 꿈을 키울 것입니다.</p>
+    </div>
+</section>
+
+
+  <footer class="footer">
+    <p>&copy; 2023 한신포차. graymango7</p>
+  </footer>
+</body>
+</html>
